@@ -1,0 +1,25 @@
+<!-- Navbar -->
+<app-sidebar></app-sidebar>
+
+<div id="content">
+
+  <!-- Title  -->
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h1>  {{ title }} </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Page Content -->
+  <div class="container mb-4">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+<!-- Footer -->
+<app-footer></app-footer>

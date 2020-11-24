@@ -1,0 +1,27 @@
+
+<app-variables-form></app-variables-form>
+
+
+<app-algorithm-chart [hidden]="!distance"></app-algorithm-chart>
+
+<p *ngIf="distance"><strong>Résultat de la simulation : </strong> Le plus court chemin pour aller de  <span class="text-primary">{{ markers[0]['name'] }}</span>  à <span class="text-primary">{{ markers[markers.length - 1]['name'] }}</span> est le suivant.
+  Il faudra <strong class="text-success">{{ distance | number }} km</strong> pour y aller.</p>
+
+<agm-map [latitude]="lat"
+         [longitude]="lng"
+         [restriction]="countryRestriction"
+         [zoom]="1">
+  <agm-marker *ngFor="let m of markers"
+              [latitude]="m.lat"
+              [longitude]="m.lng"
+  ></agm-marker>
+  <agm-polyline [editable]="false">
+    <agm-polyline-point *ngFor="let m of markers"
+                        [latitude]="m.lat"
+                        [longitude]="m.lng">
+    </agm-polyline-point>
+  </agm-polyline>
+</agm-map>
+
+
+

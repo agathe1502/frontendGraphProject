@@ -1,0 +1,85 @@
+<form [formGroup]="variablesForm" class="form-group" (ngSubmit)="onRunAlgorithm()">
+  <div *ngIf="loading" class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <ng-template #rt let-r="result" let-t="term">
+    <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+  </ng-template>
+
+  <div class="row" *ngIf="!fileCreated">
+    <div class="col">
+      <label> Nombre d'habitants minimum</label>
+      <input type="number"
+             formControlName="popmin"
+             placeholder="Nombre d'habitants minimum"
+             class="form-control"
+      >
+    </div>
+    <div class="col">
+      <label> Distance maximale</label>
+      <input type="number"
+             formControlName="dmax"
+             placeholder="Distance maximale"
+             class="form-control"
+      >
+    </div>
+  </div>
+  <div class="row" *ngIf="fileCreated">
+    <div class="col">
+      <p>Vous avez généré un graphe avec les paramètres suivants :</p>
+      <ul>
+        <li> Nombre minimum d'habitants : {{ variablesForm.controls['popmin'].value }}</li>
+        <li> Distance maximale entre les villes : {{ variablesForm.controls['dmax'].value }}</li>
+      </ul>
+      <a class="mb-4"
+         href=""
+         download="Communes_{{ variablesForm.controls['dmax'].value }}_{{ variablesForm.controls['popmin'].value }}">Télécharger
+        le graphe</a>
+
+    </div>
+  </div>
+  <div class="row" [hidden]="!fileCreated">
+    <div class="col">
+      <label> Ville de départ</label>
+      <input
+        class="form-control"
+        type="text"
+        formControlName="srcVertex"
+        [ngbTypeahead]="search1"
+        (focus)="focus1$.next($any($event).target.value)"
+        (click)="click1$.next($any($event).target.value)"
+        [resultTemplate]="rt"
+        [inputFormatter]="formatter"
+        #instance1="ngbTypeahead"
+      />
+    </div>
+    <div class="col">
+      <label> Ville d'arrivée</label>
+      <input
+        class="form-control"
+        type="text"
+        formControlName="endVertex"
+        [ngbTypeahead]="search2"
+        (focus)="focus2$.next($any($event).target.value)"
+        (click)="click2$.next($any($event).target.value)"
+        [resultTemplate]="rt"
+        [inputFormatter]="formatter"
+        #instance2="ngbTypeahead"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center mt-4">
+      <button class="btn btn-secondary" *ngIf="!fileCreated" type="submit" [disabled]="variablesForm.invalid"> Générer
+        le graphe
+      </button>
+      <button class="btn btn-secondary" *ngIf="fileCreated" type="submit" [disabled]="variablesForm.invalid"> Lancer les
+        algorithmes
+      </button>
+    </div>
+  </div>
+</form>
+
+
