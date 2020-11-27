@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {DefaultComponent} from './layouts/default/default.component';
 import {DashboardComponent} from './pages/dashboard/dashboard.component';
 import {Vrp1PageComponent} from './pages/vrp1-page/vrp1-page.component';
+import {Vrp2PageComponent} from "./pages/vrp2-page/vrp2-page.component";
 
 const routes: Routes = [{
   path: '',
@@ -15,7 +16,7 @@ const routes: Routes = [{
     component: Vrp1PageComponent
   }, {
     path: 'vrp2',
-    component: Vrp1PageComponent
+    component: Vrp2PageComponent
   },
     {
       path: 'dashboard',

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { VariablesFormComponent } from './variables-form.component';
+import {VariablesFormComponent} from './variables-form.component';
 
 describe('VariablesFormComponent', () => {
   let component: VariablesFormComponent;
@@ -8,9 +8,9 @@ describe('VariablesFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VariablesFormComponent ]
+      declarations: [VariablesFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

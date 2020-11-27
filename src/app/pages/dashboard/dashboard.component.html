@@ -1,11 +1,16 @@
-
 <app-variables-form></app-variables-form>
 
 
 <app-algorithm-chart [hidden]="!distance"></app-algorithm-chart>
 
-<p *ngIf="distance"><strong>Résultat de la simulation : </strong> Le plus court chemin pour aller de  <span class="text-primary">{{ markers[0]['name'] }}</span>  à <span class="text-primary">{{ markers[markers.length - 1]['name'] }}</span> est le suivant.
+<p *ngIf="distance"><strong>Résultat de la simulation : </strong> Le plus court chemin pour aller de <span
+  class="text-primary">{{ markers[0]['name'] }}</span> à <span
+  class="text-primary">{{ markers[markers.length - 1]['name'] }}</span> est le suivant.
   Il faudra <strong class="text-success">{{ distance | number }} km</strong> pour y aller.</p>
+
+<div class="alert alert-warning" *ngIf="errorInfinity"><strong>Aïe ! </strong> Il n'est pas possible d'obtenir le chemin
+  avec ce graphe. Saisissez une distance plus grande, ou un minimum de populations plus petit.
+</div>
 
 <agm-map [latitude]="lat"
          [longitude]="lng"

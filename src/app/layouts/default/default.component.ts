@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
@@ -10,13 +10,14 @@ export class DefaultComponent implements OnInit {
 
   title = 'Comparaison des algorithmes';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
     this.router.events.subscribe((val) => {
       // see also
-      if (val instanceof NavigationEnd){
-        switch (val.url){
+      if (val instanceof NavigationEnd) {
+        switch (val.url) {
           case '/vrp1':
             this.title = 'Exercice du 1er VRP';
             break;

@@ -1,56 +1,65 @@
+<div class="row mb-4">
+  <div class="col">
+    <h3>Enoncé</h3>
+    <p> Un VRP doit se rendre chaque jour dans une grande ville (plus de 200000 habitants) choisie aléatoirement. </p>
+      Dans quelle ville, parmi les 36208, devrait-il habiter pour minimiser ses déplacements ?
+      <p>Quel sera alors la distance moyenne de ses trajets ? 7</p>
+  </div>
+</div>
 
+<h3 class="mt-4">Résultat</h3>
 
-    <div class="row">
-      <div class="col text-center">
-        <button class="btn btn-secondary mb-4" (click)="onRunSimulation()"> Lancer la simulation </button>
-      </div>
-    </div>
+<div class="row">
+  <div class="col text-center">
+    <button class="btn btn-secondary mb-4" (click)="onRunSimulation()"> Lancer la simulation</button>
+  </div>
+</div>
 
-    <agm-map [latitude]="lat"
-             [longitude]="lng"
-             [restriction]="countryRestriction"
-             [zoom]="1">
-      <agm-marker *ngFor="let city of bigCities"
-                  [latitude]="city.lat"
-                  [longitude]="city.lng"
-      ></agm-marker>
-      <agm-marker *ngIf="cityToLive"
-                  [latitude]="cityToLive.lat"
-                  [longitude]="cityToLive.lng"
-                  [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'"
+<agm-map [latitude]="lat"
+         [longitude]="lng"
+         [restriction]="countryRestriction"
+         [zoom]="1">
+  <agm-marker *ngFor="let city of bigCities"
+              [latitude]="city.lat"
+              [longitude]="city.lng"
+  ></agm-marker>
+  <agm-marker *ngIf="cityToLive"
+              [latitude]="cityToLive.lat"
+              [longitude]="cityToLive.lng"
+              [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'"
 
-      >
-        <agm-info-window>
-          <p><strong class="capitalize" >{{ cityToLive.name }} </strong> est la ville dans laquelle le VRP doit vivre.</p>
-          <p>Moyenne : {{ average | number}} km</p>
-        </agm-info-window>
-      </agm-marker>
+  >
+    <agm-info-window>
+      <p><strong class="capitalize">{{ cityToLive.name }} </strong> est la ville dans laquelle le VRP doit vivre.</p>
+      <p>Moyenne : {{ average | number}} km</p>
+    </agm-info-window>
+  </agm-marker>
 
-    </agm-map>
+</agm-map>
 
-    <div class="card mt-4 mb-4" *ngIf="cityToLive">
-      <div class="card-header">
-        <h2>Récapitulatif de la simulation</h2>
-      </div>
-      <div class="card-body">
-        <h4>Les {{ bigCities.length }} plus grandes villes :</h4>
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <th>Ville</th>
-            <th class="text-center">Nombre d'habitants</th>
-            <th class="text-center">Moyenne avec {{ cityToLive.name }} (km)</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let c of bigCities; let index = index">
-            <td class="capitalize">{{ c.name }}</td>
-            <td class="text-center">{{ c.population }}</td>
-            <td class="text-center">{{ averages[index] }}</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<div class="card mt-4 mb-4" *ngIf="cityToLive">
+  <div class="card-header">
+    <h2>Récapitulatif de la simulation</h2>
+  </div>
+  <div class="card-body">
+    <h4>Les {{ bigCities.length }} plus grandes villes :</h4>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Ville</th>
+        <th class="text-center">Nombre d'habitants</th>
+        <th class="text-center">Moyenne avec {{ cityToLive.name }} (km)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of bigCities; let index = index">
+        <td class="capitalize">{{ c.name }}</td>
+        <td class="text-center">{{ c.population }}</td>
+        <td class="text-center">{{ averages[index] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 

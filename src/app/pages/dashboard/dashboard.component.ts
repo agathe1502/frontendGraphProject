@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {VariablesFormService} from '../../services/variables-form.service';
 import {AlgorithmService} from '../../services/algorithm.service';
@@ -35,13 +35,15 @@ export class DashboardComponent implements OnInit {
     strictBounds: true,
   };
 
+  errorInfinity = false;
 
 
   ngOnInit() {
-    this.variablesFormService.onFormSubmitted.subscribe( (formData: any ) => {
-      for (let i = 1; i <= 5; i++) {{
-        this.onRunAlgorithms(formData);
-      }
+    this.variablesFormService.onFormSubmitted.subscribe((formData: any) => {
+      for (let i = 1; i <= 5; i++) {
+        {
+          this.onRunAlgorithms(formData);
+        }
       }
     });
   }
@@ -59,6 +61,9 @@ export class DashboardComponent implements OnInit {
         this.dijkstra = {
           time: response["time"],
         };
+      }, error => {
+        this.reset();
+        this.errorInfinity = true;
       }
     );
     this.algorithmService.runDijkstraFibo(dmax, popmin, srcVertex, endVertex).subscribe(
@@ -81,7 +86,14 @@ export class DashboardComponent implements OnInit {
 
   }
 
-
+  reset() {
+    this.errorInfinity = false;
+    this.markers = [];
+    this.dijkstra = null;
+    this.dijkstraFibo = null;
+    this.distance = null;
+    this.astar = null;
+  }
 
 
 }

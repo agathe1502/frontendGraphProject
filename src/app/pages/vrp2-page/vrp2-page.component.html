@@ -1,0 +1,36 @@
+<div class="row mb-4">
+  <div class="col">
+    <h3>Enoncé</h3>
+    <p> Un VRP doit se déplacer dans chacune des grandes villes (plus de x habitants)
+      en les visitant l’une après l’autre sans y passer deux fois et en revenant à la ville de départ. </p>
+      <p>Déterminer automatiquement un trajet qui minimise la distance totale parcourue (avec x = 200000, 150000 et 100000). </p>
+  </div>
+</div>
+
+<h3 class="mt-4">Résultat</h3>
+<app-vrp2-form></app-vrp2-form>
+
+<p *ngIf="distance"> Ci-dessous le trajet qui minimise la distance totale parcourue
+  <strong>({{ distance | number }} km)</strong>. L'algorithme a été réalisé en <strong>{{ time |number }} ms</strong>.
+</p>
+
+<agm-map [latitude]="lat"
+         [longitude]="lng"
+         [restriction]="countryRestriction"
+         [zoom]="1">
+  <agm-marker *ngFor="let m of markersFiltered"
+              [latitude]="m.lat"
+              [longitude]="m.lng"
+  ></agm-marker>
+  <agm-marker *ngIf="city"
+              [latitude]="city.lat"
+              [longitude]="city.lng"
+              [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'"
+  ></agm-marker>
+  <agm-polyline [editable]="false">
+    <agm-polyline-point *ngFor="let m of markers"
+                        [latitude]="m.lat"
+                        [longitude]="m.lng">
+    </agm-polyline-point>
+  </agm-polyline>
+</agm-map>

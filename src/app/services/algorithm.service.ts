@@ -10,25 +10,30 @@ export class AlgorithmService {
   onRunDijkstraFibo = new EventEmitter<any>();
   onRunAstar = new EventEmitter<any>();
 
-  constructor(private httpClient: HttpClient) { }
-
-  runDijkstra(dmax: number, popmin: number, srcVertex: number, endVertex: number){
-    return this.httpClient.get<any[]>('http://localhost:8080/api/dijkstra/' + dmax + '/' + popmin + '/' + srcVertex + '/' + endVertex);
+  constructor(private httpClient: HttpClient) {
   }
 
-  runDijkstraFibo(dmax: number, popmin: number, srcVertex: number, endVertex: number){
+  runDijkstra(dmax: number, popmin: number, srcVertex: number, endVertex: number) {
+    return this.httpClient.get<any[]>('http://localhost:8080/api/dijkstra/' + dmax + '/' + popmin + '/' + srcVertex + '/' + endVertex)
+  }
+
+  runDijkstraFibo(dmax: number, popmin: number, srcVertex: number, endVertex: number) {
     return this.httpClient.get<any[]>('http://localhost:8080/api/dijkstraFibo/' + dmax + '/' + popmin + '/' + srcVertex + '/' + endVertex);
   }
 
-  runAstar(dmax: number, popmin: number, srcVertex: number, endVertex: number){
+  runAstar(dmax: number, popmin: number, srcVertex: number, endVertex: number) {
     return this.httpClient.get<any[]>('http://localhost:8080/api/astar/' + dmax + '/' + popmin + '/' + srcVertex + '/' + endVertex);
   }
 
-  runVrp1(){
+  runVrp1() {
     return this.httpClient.get<any[]>('http://localhost:8080/api/vrp1');
   }
 
-  createFile(dmax: number, popmin: number){
+  runVrp2(popmin: number, srcVertex: number) {
+    return this.httpClient.get<any[]>('http://localhost:8080/api/vrp2/' + popmin + '/' + srcVertex);
+  }
+
+  createFile(dmax: number, popmin: number) {
     return this.httpClient.get<any[]>('http://localhost:8080/api/createFile/' + dmax + '/' + popmin);
   }
 }

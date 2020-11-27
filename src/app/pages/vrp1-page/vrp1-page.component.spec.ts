@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { Vrp1PageComponent } from './vrp1-page.component';
+import {Vrp1PageComponent} from './vrp1-page.component';
 
 describe('Vrp1PageComponent', () => {
   let component: Vrp1PageComponent;
@@ -8,9 +8,9 @@ describe('Vrp1PageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Vrp1PageComponent ]
+      declarations: [Vrp1PageComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

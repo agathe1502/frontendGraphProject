@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {AgmCoreModule} from '@agm/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -43,4 +43,5 @@ import {RouterModule} from '@angular/router';
     VariablesFormService
   ],
 })
-export class DefaultModule { }
+export class DefaultModule {
+}

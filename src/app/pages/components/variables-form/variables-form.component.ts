@@ -1,10 +1,9 @@
-import {Component, Injectable, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AlgorithmService} from '../../../services/algorithm.service';
 import {VariablesFormService} from '../../../services/variables-form.service';
-import {merge, Observable, of, Subject} from 'rxjs';
-import {catchError, debounceTime, distinctUntilChanged, filter, map, switchMap, tap} from 'rxjs/operators';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {merge, Observable, Subject} from 'rxjs';
+import {debounceTime, distinctUntilChanged, filter, map} from 'rxjs/operators';
 import {NgbTypeahead} from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -18,14 +17,15 @@ export class VariablesFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private algorithmService: AlgorithmService,
               private variablesFormService: VariablesFormService,
-  ) { }
+  ) {
+  }
 
   variablesForm: FormGroup;
   fileCreated = false;
   loading = false;
   vertices: any[] = [];
 
-  formatter = (x: {name: string}) => x.name;
+  formatter = (x: { name: string }) => x.name;
 
   @ViewChild('instance1', {static: true}) instance1: NgbTypeahead;
   focus1$ = new Subject<string>();
@@ -62,7 +62,7 @@ export class VariablesFormComponent implements OnInit {
     this.initForm();
   }
 
-  initForm(){
+  initForm() {
     this.variablesForm = this.formBuilder.group({
       dmax: ['50', Validators.required],
       popmin: ['5000', Validators.required],
@@ -73,21 +73,20 @@ export class VariablesFormComponent implements OnInit {
   }
 
   onRunAlgorithm() {
-    if (!this.fileCreated ){
+    if (!this.fileCreated) {
       this.loading = true;
       // Lancer la génération du fichier
       this.fileCreated = true;
-      this.algorithmService.createFile(this.variablesForm.controls['dmax'].value, this.variablesForm.controls['popmin'].value )
-        .subscribe( response => {
-          this.loading = false;
-          this.vertices = response;
-        }
+      this.algorithmService.createFile(this.variablesForm.controls['dmax'].value, this.variablesForm.controls['popmin'].value)
+        .subscribe(response => {
+            this.loading = false;
+            this.vertices = response;
+          }
         );
       // pour ne pas pouvoir lancer l'algorithme alors que les villes sont vides
       this.variablesForm.controls['srcVertex'].reset('');
       this.variablesForm.controls['endVertex'].reset('');
-    }
-    else {
+    } else {
       // previent qu'il faut lancer les algorithmes
       return this.variablesFormService.onFormSubmitted.emit(this.variablesForm.value);
     }

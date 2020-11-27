@@ -1,8 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="05ef8573-0f24-47da-b354-e3150ddbad7e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/protractor.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/app.po.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/default/default.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/default/default.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/default/default.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/default/default.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/default/default.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/algorithm-chart/algorithm-chart.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/algorithm-chart/algorithm-chart.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/algorithm-chart/algorithm-chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/algorithm-chart/algorithm-chart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/variables-form/variables-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/variables-form/variables-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/variables-form/variables-form.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/variables-form/variables-form.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/variables-form/variables-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/variables-form/variables-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/shared/footer/footer.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/shared/footer/footer.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/shared/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/shared/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/shared/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/shared/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/shared/navbar/navbar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/shared/navbar/navbar.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/shared/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/shared/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/vrp1-page/vrp1-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/vrp1-page/vrp1-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/vrp1-page/vrp1-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/vrp1-page/vrp1-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/vrp1-page/vrp1-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/vrp1-page/vrp1-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/algorithm.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/algorithm.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/algorithm.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/algorithm.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/variables-form.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/variables-form.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/variables-form.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/variables-form.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kjY2Hdasc6bJyY370JZnZA2t20" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\Epulapp\Documents\INFO 4A\Graphes et Applications\frontendGraphProject\node_modules\typescript\lib" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05ef8573-0f24-47da-b354-e3150ddbad7e" name="Default Changelist" comment="" />
+      <created>1606215259065</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606215259065</updated>
+      <workItem from="1606215260145" duration="1248000" />
+      <workItem from="1606489578609" duration="11145000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1515" height="264" key="GridCell.Tab.0.bottom" timestamp="1606503521405">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="264" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606503521405" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606215412188" />
+    <state width="1515" height="264" key="GridCell.Tab.0.center" timestamp="1606503521405">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="264" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606503521405" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606215412187" />
+    <state width="1515" height="264" key="GridCell.Tab.0.left" timestamp="1606503521405">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="264" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606503521405" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606215412186" />
+    <state width="1515" height="264" key="GridCell.Tab.0.right" timestamp="1606503521405">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="264" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606503521405" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606215412187" />
   </component>
 </project>

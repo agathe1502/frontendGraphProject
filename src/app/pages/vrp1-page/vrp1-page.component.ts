@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AlgorithmService} from '../../services/algorithm.service';
 
 @Component({
@@ -8,7 +8,8 @@ import {AlgorithmService} from '../../services/algorithm.service';
 })
 export class Vrp1PageComponent implements OnInit {
 
-  constructor(private algorithmService: AlgorithmService) { }
+  constructor(private algorithmService: AlgorithmService) {
+  }
 
   lat = 46.7333;
   lng = 2.616767;
@@ -33,7 +34,7 @@ export class Vrp1PageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onRunSimulation(){
+  onRunSimulation() {
     this.algorithmService.runVrp1().subscribe(
       response => {
         this.average = response['average'];

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as Highcharts from 'highcharts';
-import {VariablesFormService} from '../../../services/variables-form.service';
 import {AlgorithmService} from '../../../services/algorithm.service';
 
 @Component({
@@ -18,22 +17,24 @@ export class AlgorithmChartComponent implements OnInit {
   astarTimes: number[] = [];
   titleColumns: string[] = [];
 
-  constructor(private algorithmService: AlgorithmService) { }
+  constructor(private algorithmService: AlgorithmService) {
+  }
 
   ngOnInit(): void {
     this.initChart();
-    this.algorithmService.onRunDijkstraFibo.subscribe( (time: number ) => {
-      this.getTimeDijkstraFibo(time);
-    });
-    this.algorithmService.onRunDijkstra.subscribe( (time: number ) => {
+    this.algorithmService.onRunDijkstraFibo.subscribe((time: number) => {
+        this.getTimeDijkstraFibo(time)
+      }
+    );
+    this.algorithmService.onRunDijkstra.subscribe((time: number) => {
       this.getTimeDijkstra(time);
     });
-    this.algorithmService.onRunAstar.subscribe( (time: number ) => {
+    this.algorithmService.onRunAstar.subscribe((time: number) => {
       this.getTimeAstar(time);
     });
   }
 
-  initChart(){
+  initChart() {
     this.chartOptions = {
       chart: {
         type: 'column'
@@ -89,12 +90,12 @@ export class AlgorithmChartComponent implements OnInit {
 
   private getTimeAstar(time: number) {
     this.astarTimes.push(time);
-    switch (this.astarTimes.length){
+    switch (this.astarTimes.length) {
       case 1 :
         this.titleColumns.push('1ère simulation');
         break;
       default:
-        this.titleColumns.push( this.astarTimes.length + 'ème simulation');
+        this.titleColumns.push(this.astarTimes.length + 'ème simulation');
     }
     this.initChart();
   }

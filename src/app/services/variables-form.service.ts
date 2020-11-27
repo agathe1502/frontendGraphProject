@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 
 
 @Injectable({
@@ -6,8 +6,10 @@ import { Injectable, EventEmitter } from '@angular/core';
 })
 export class VariablesFormService {
 
-  constructor() { }
+  constructor() {
+  }
 
   onFormSubmitted = new EventEmitter<any>();
+  onFormVRP2Submitted = new EventEmitter<any>();
 
 }

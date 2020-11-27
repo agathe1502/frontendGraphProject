@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AlgorithmChartComponent } from './algorithm-chart.component';
+import {AlgorithmChartComponent} from './algorithm-chart.component';
 
 describe('AlgorithmChartComponent', () => {
   let component: AlgorithmChartComponent;
@@ -8,9 +8,9 @@ describe('AlgorithmChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AlgorithmChartComponent ]
+      declarations: [AlgorithmChartComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
